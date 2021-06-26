@@ -7,7 +7,10 @@ const StatusMessage = ({ winner, current }) => {
       {winner && (
         <>
           <span className={winner === 'X' ? 'text-green' : 'text-pink'}>
-            {winner} is the <i>WINNER</i>
+            <b>{winner}</b> is the{' '}
+            <b>
+              <i>WINNER</i>
+            </b>
           </span>
         </>
       )}
@@ -22,7 +25,7 @@ const StatusMessage = ({ winner, current }) => {
       )}
       {!winner && noMovesLeft && (
         <>
-          <span className="text-green">X</span> and{' '}
+          Tie between <span className="text-green">X</span> &{' '}
           <span className="text-pink">O</span>
         </>
       )}

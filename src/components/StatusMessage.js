@@ -6,24 +6,24 @@ const StatusMessage = ({ winner, current }) => {
     <div className="status-message">
       {winner && (
         <>
-          Winner is{' '}
-          <span className={winner === 'X' ? 'text-green' : 'text-orange'}>
-            {winner}
+          <span className={winner === 'X' ? 'text-green' : 'text-pink'}>
+            {winner} is the <i>WINNER</i>
           </span>
         </>
       )}
       {!winner && !noMovesLeft && (
         <>
-          Next player is{' '}
-          <span className={current.isXNext ? 'text-green' : 'text-orange'}>
-            {current.isXNext ? 'X' : 'O'}
-          </span>
+          ...{' '}
+          <span className={current.isXNext ? 'text-green' : 'text-pink'}>
+            {current.isXNext ? 'X' : 'O'}'s
+          </span>{' '}
+          turn ...
         </>
       )}
       {!winner && noMovesLeft && (
         <>
           <span className="text-green">X</span> and{' '}
-          <span className="text-orange">O</span>
+          <span className="text-pink">O</span>
         </>
       )}
     </div>
